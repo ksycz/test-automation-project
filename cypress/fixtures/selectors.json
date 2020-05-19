@@ -1,0 +1,17 @@
+{
+    // input
+    "teamNameInput": "input#name",
+    "submitTeamNameBtn": "button[type='submit']",
+    "subpageHeading": ".coDSFL > h2",
+    "errorMessage": ".hEUWbM",
+
+    // header
+    "headerLink": "header > h1 > a",
+
+    // footer
+    "footerLink": "footer > p > a",
+
+    // game
+    "inputLinkForTeam": ".hQyhlB"
+
+}

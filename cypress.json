@@ -1,0 +1,5 @@
+{
+    "baseUrl": "https://test-stfu-applifting.herokuapp.com/",
+    "video": false,
+    "chromeWebSecurity": false
+}

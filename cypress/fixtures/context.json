@@ -1,0 +1,20 @@
+{
+    "correctTeamNameLettersOnly": "veryGoodTeamName",
+    "correctTeamNameDigitsOnly": "666",
+    "correctTeamNameLettersDigitsCombo": "666veryGoodTeamName666",
+    "correctTeamNameLettersDigitsUnderscoreCombo": "666_very_GoodTeamName",
+    "correctTeamNameShortest": "1",
+    "incorrectTeamNameSpecialChar": "veryGoodTeamName??",
+    "incorrectTeamNameTextWithSpaces": "very good team name",
+    "incorrectTeamNameDiacritics": "ŚwietnaNazwaZespołu",
+    "incorrectTeamNameTooLong": "666_very_GoodTeamName666",
+
+    // header
+    "headerLink": "http://stfuandclick.com/",
+
+    // footer
+    "footerLink": "https://www.applifting.cz/",
+
+    // game
+    "linkForTeam": "https://test-stfu-applifting.herokuapp.com/666_very_GoodTeamName6"
+}

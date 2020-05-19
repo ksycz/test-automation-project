@@ -1,0 +1,8 @@
+node_modules/
+errorShots/*.png
+
+# exclude vscode settings
+.vscode
+
+cypress/screenshots/
+cypress/videos/
