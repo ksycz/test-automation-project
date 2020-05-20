@@ -32,7 +32,7 @@ Run tests via the Test Runner GUI:
     $ npx cypress open
 ```
 
-When the Cypress GUI opens, click the test file name to run it. 
+When the Cypress GUI opens, you can select the browser in the top-right corner of the window and then click the test file name to run it. 
 
 To run a specific test suite only, use the following command: 
 
