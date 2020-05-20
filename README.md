@@ -44,7 +44,7 @@ More commands can be found [here](https://docs.cypress.io/guides/guides/command-
 
 ### Chrome security
 
-
+I use `{ "chromeWebSecurity": false }` to avoid cross origin errors that would stop me from testing in this case.
 
 
 
