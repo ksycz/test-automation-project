@@ -1,0 +1,23 @@
+{
+  "name": "test-automation-project",
+  "version": "1.0.0",
+  "description": "Ensure that you have node.js and npm installed by checking their versions.\r ```\r     $ npm -v\r     $ node -v\r ```\r If they are not installed, download and install node.js (including npm) from the [Node.js website](https://nodejs.org/en/download/)",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "cypress": "^4.6.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ksycz/test-automation-project.git"
+  },
+  "author": "ksycz",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ksycz/test-automation-project/issues"
+  },
+  "homepage": "https://github.com/ksycz/test-automation-project#readme"
+}
