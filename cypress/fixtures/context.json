@@ -1,7 +1,7 @@
 {
     "correctTeamNameLettersOnly": "veryGoodTeamName",
     "correctTeamNameDigitsOnly": "666",
-    "correctTeamNameLettersDigitsCombo": "666veryGoodTeamName666",
+    "correctTeamNameLettersDigitsCombo": "666veryGoodTeam",
     "correctTeamNameLettersDigitsUnderscoreCombo": "666_very_GoodTeamName",
     "correctTeamNameShortest": "1",
     "incorrectTeamNameSpecialChar": "veryGoodTeamName??",

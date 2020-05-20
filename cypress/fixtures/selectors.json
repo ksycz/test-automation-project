@@ -12,6 +12,8 @@
     "footerLink": "footer > p > a",
 
     // game
-    "inputLinkForTeam": ".hQyhlB"
+    "inputLinkForTeam": ".hQyhlB",
+    "activeTeamNameRowClicks": ".eHeozA .kIQzVd",
+    "clickActionBtn": ".hMxnjl",
 
 }
