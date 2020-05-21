@@ -13,42 +13,42 @@ describe('Testing team name input', function() {
         .get(selectors.submitTeamNameBtn).click()
         .get(selectors.errorMessage)
         .should('be.visible')
-        .and('contain', 'Team name contains forbidden characters')
+        .and('contain', context.errorMessageTeamNameEmpty)
     });
   
-    it('1.2 - The team name should be created with the correct input', function () {
+    it(`1.2 - The team name should be created with the correct input: ${context.correctTeamNameLettersOnly}`, function () {
         cy
         .get(selectors.teamNameInput).type(context.correctTeamNameLettersOnly)
         .get(selectors.submitTeamNameBtn).click()
-        .location('pathname').should('eq', `/${context.correctTeamNameLettersOnly}`)
+        .location('pathname').should('eq', context.correctTeamNameLettersOnly)
     });
 
-    it('1.3 - The team name should be created if only digits were inserted', function () {
+    it(`1.3 - The team name should be created if only digits were inserted: ${context.correctTeamNameDigitsOnly}`, function () {
         cy
         .get(selectors.teamNameInput).type(context.correctTeamNameDigitsOnly)
         .get(selectors.submitTeamNameBtn).click()
-        .location('pathname').should('eq', `/${context.correctTeamNameDigitsOnly}`)
+        .location('pathname').should('eq', context.correctTeamNameDigitsOnly)
   });
 
-    it('1.4 - The team name should be created if the combination of letters and numbers was inserted', function () {
+    it(`1.4 - The team name should be created if the combination of letters and numbers was inserted: ${context.correctTeamNameLettersDigitsCombo}`, function () {
         cy
         .get(selectors.teamNameInput).type(context.correctTeamNameLettersDigitsCombo)
         .get(selectors.submitTeamNameBtn).click()
-        .location('pathname').should('eq', `/${context.correctTeamNameLettersDigitsCombo}`)
+        .location('pathname').should('eq', context.correctTeamNameLettersDigitsCombo)
     });
 
     it(`1.5 - The team name should be created if the combination of letters, numbers and underscores was inserted: ${context.correctTeamNameLettersDigitsUnderscoreCombo}`, function () {
         cy
         .get(selectors.teamNameInput).type(context.correctTeamNameLettersDigitsUnderscoreCombo)
         .get(selectors.submitTeamNameBtn).click()
-        .location('pathname').should('eq', `/${context.correctTeamNameLettersDigitsUnderscoreCombo}`)
+        .location('pathname').should('eq', context.correctTeamNameLettersDigitsUnderscoreCombo)
     });
 
     it(`1.6 - The team name should be created if at least one valid character was inserted: ${context.correctTeamNameShortest}`, function () {
         cy
         .get(selectors.teamNameInput).type(context.correctTeamNameShortest)
         .get(selectors.submitTeamNameBtn).click()
-        .location('pathname').should('eq', `/${context.correctTeamNameShortest}`)
+        .location('pathname').should('eq', context.correctTeamNameShortest)
     });
 
     it(`1.7 - The team name should not be created with the incorrect input containing special characters: ${context.incorrectTeamNameSpecialChar}`, function () {
@@ -57,7 +57,7 @@ describe('Testing team name input', function() {
         .get(selectors.submitTeamNameBtn).click()
         .get(selectors.errorMessage)
         .should('be.visible')
-        .and('contain', 'Team name contains forbidden characters')
+        .and('contain', context.errorMessageTeamNameForbiddenChar)
     });
 
     it(`1.8 - The team name should not be created with the incorrect input containing diacritis: ${context.incorrectTeamNameDiacritics}`, function () {
@@ -66,7 +66,7 @@ describe('Testing team name input', function() {
             .get(selectors.submitTeamNameBtn).click()
             .get(selectors.errorMessage)
             .should('be.visible')
-            .and('contain', 'Team name contains forbidden characters')
+            .and('contain', context.errorMessageTeamNameForbiddenChar)
         });
 
     it(`1.9 - The team name should not be created with the incorrect input containing spaces: ${context.incorrectTeamNameTextWithSpaces}`, function () {
@@ -75,33 +75,24 @@ describe('Testing team name input', function() {
         .get(selectors.submitTeamNameBtn).click()
         .get(selectors.errorMessage)
         .should('be.visible')
-        .and('contain', 'The team name cannot contain spaces. Please create a new name.')
+        .and('contain', context.errorMessageTeamNameSpaces)
     });
 
-    it('1.10 - The team name should not be created if only the space was inserted', function () {
-    cy
-        .get(selectors.teamNameInput).type(' ')
-        .get(selectors.submitTeamNameBtn).click()
-        .get(selectors.errorMessage)
-        .should('be.visible')
-        .and('contain', 'The team name contains only space(s). Please insert some letters and/or digits to create the name.')
-    });
-
-    it(`1.11 - The team name should not be created if the input is too long, for example: ${context.incorrectTeamNameTooLong}`, function () {
+    it(`1.10 - The team name should not be created if the input is too long: ${context.incorrectTeamNameTooLong}`, function () {
         cy
         .get(selectors.teamNameInput).type(context.incorrectTeamNameTooLong)
         .get(selectors.submitTeamNameBtn).click()
         .get(selectors.errorMessage)
         .should('be.visible')
-        .and('contain', 'The team name is too long. Please insert the name that has no more than 21 characters')
+        .and('contain', context.errorMessageTeamNameTooLong)
     });
 
-    it(`1.12 - The team name should not be created if the inserted name already exists, for example: ${context.correctTeamNameLettersOnly}`, function () {
+    it(`1.11 - The team name should not be created if the inserted name already exists: ${context.correctTeamNameLettersOnly}`, function () {
         cy
         .get(selectors.teamNameInput).type(context.correctTeamNameLettersOnly)
         .get(selectors.submitTeamNameBtn).click()
         .get(selectors.errorMessage)
         .should('be.visible')
-        .and('contain', 'The inserted team name already exists. Please create a unique name.')
+        .and('contain', context.errorMessageTeamNameDuplicate)
     });
 });

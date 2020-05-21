@@ -8,6 +8,11 @@
     "incorrectTeamNameTextWithSpaces": "very good team name",
     "incorrectTeamNameDiacritics": "ŚwietnaNazwaZespołu",
     "incorrectTeamNameTooLong": "666_very_GoodTeamName666",
+    "errorMessageTeamNameEmpty": "The team name field cannot be empty. Please enter some team name.",
+    "errorMessageTeamNameForbiddenChar": "Team name contains forbidden characters",
+    "errorMessageTeamNameSpaces": "The team name cannot contain spaces. Please create a new name.",
+    "errorMessageTeamNameTooLong": "The team name is too long. Please insert the name that has no more than 21 characters",
+    "errorMessageTeamNameDuplicate": "The inserted team name already exists. Please create a unique name.",
 
     // header
     "headerLink": "http://stfuandclick.com/",
