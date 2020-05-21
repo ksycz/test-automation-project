@@ -4,6 +4,7 @@
     "submitTeamNameBtn": "button[type='submit']",
     "subpageHeading": ".coDSFL > h2",
     "errorMessage": ".hEUWbM",
+    "teamNameInputContainer": ".coDSFL:first-child",
 
     // header
     "headerLink": "header > h1 > a",
